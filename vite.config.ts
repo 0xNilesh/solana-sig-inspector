@@ -13,6 +13,10 @@ export default defineConfig(({ mode }) => ({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
+      buffer: path.resolve(__dirname, 'node_modules', 'buffer'),
     },
+  },
+  define: {
+    'global.Buffer': 'buffer.Buffer',
   },
 }));
